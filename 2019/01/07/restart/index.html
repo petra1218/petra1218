@@ -12,20 +12,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
   
-    <meta name="keywords" content="petra,前端,设计,Hexo主题,前端开发,用户体验,设计,frontend,design,nodejs,JavaScript">
+    <meta name="keywords" content="随笔,">
   
 
-  <meta name="description" content="重启齿轮峡谷之Hexo填坑">
+  <meta name="description" content="重启齿轮峡谷之填坑Hexo​    一直有弄个博客网站的计划，但是一直没（lan）准（ai）备（mo）好（qi）。又是新的一年了，年初就开始吧。 ​    原设计是用flask自己来写，主机已经荒了一年，域名荒了N年了，但是做为一个没做过web的人是有点麻烦，先用个简单的办法，把博客维护起来，然后再一点点的拼flask服务。于是就有了这次给Hexo+GitHub填坑的经历。 ​    Hexo上手">
+<meta name="keywords" content="随笔">
 <meta property="og:type" content="article">
 <meta property="og:title" content="restart">
 <meta property="og:url" content="http://yoursite.com/2019/01/07/restart/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="重启齿轮峡谷之Hexo填坑">
+<meta property="og:description" content="重启齿轮峡谷之填坑Hexo​    一直有弄个博客网站的计划，但是一直没（lan）准（ai）备（mo）好（qi）。又是新的一年了，年初就开始吧。 ​    原设计是用flask自己来写，主机已经荒了一年，域名荒了N年了，但是做为一个没做过web的人是有点麻烦，先用个简单的办法，把博客维护起来，然后再一点点的拼flask服务。于是就有了这次给Hexo+GitHub填坑的经历。 ​    Hexo上手">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-01-07T15:54:03.818Z">
+<meta property="og:updated_time" content="2019-01-08T17:27:03.236Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="restart">
-<meta name="twitter:description" content="重启齿轮峡谷之Hexo填坑">
+<meta name="twitter:description" content="重启齿轮峡谷之填坑Hexo​    一直有弄个博客网站的计划，但是一直没（lan）准（ai）备（mo）好（qi）。又是新的一年了，年初就开始吧。 ​    原设计是用flask自己来写，主机已经荒了一年，域名荒了N年了，但是做为一个没做过web的人是有点麻烦，先用个简单的办法，把博客维护起来，然后再一点点的拼flask服务。于是就有了这次给Hexo+GitHub填坑的经历。 ​    Hexo上手">
 
   
 
@@ -160,7 +161,7 @@ ga('send', 'pageview');
 
   <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
-    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#重启齿轮峡谷之Hexo填坑"><span class="toc-text">重启齿轮峡谷之Hexo填坑</span></a></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#重启齿轮峡谷之填坑Hexo"><span class="toc-text">重启齿轮峡谷之填坑Hexo</span></a></li></ol>
   </div>
 
 
@@ -201,7 +202,52 @@ ga('send', 'pageview');
 
   <div class="article-content">
     
-      <h1 id="重启齿轮峡谷之Hexo填坑"><a href="#重启齿轮峡谷之Hexo填坑" class="headerlink" title="重启齿轮峡谷之Hexo填坑"></a>重启齿轮峡谷之Hexo填坑</h1>
+      <h1 id="重启齿轮峡谷之填坑Hexo"><a href="#重启齿轮峡谷之填坑Hexo" class="headerlink" title="重启齿轮峡谷之填坑Hexo"></a>重启齿轮峡谷之填坑Hexo</h1><p>​    一直有弄个博客网站的计划，但是一直没（lan）准（ai）备（mo）好（qi）。又是新的一年了，年初就开始吧。</p>
+<p>​    原设计是用flask自己来写，主机已经荒了一年，域名荒了N年了，但是做为一个没做过web的人是有点麻烦，先用个简单的办法，把博客维护起来，然后再一点点的拼flask服务。于是就有了这次给Hexo+GitHub填坑的经历。</p>
+<p>​    Hexo上手确实挺方便，现成的安装服务，只要nodejs支持就可以。实际上从下载到部署成功也就<strong>N</strong>步：</p>
+<ul>
+<li><p>下载安装，<a href="https://nodejs.org/en/" title="Node.js" target="_blank" rel="noopener">nodejs</a></p>
+</li>
+<li><p>检查环境：<code>node -v</code> <code>npm -v</code> 检查nodejs和npm是否安装成功</p>
+</li>
+<li><p>安装Hexo：<code>npm install -g hexo-cli</code></p>
+</li>
+<li><p>创建本地博客：<code>hexo init blog</code> ，这个命令看网络情况，经常性的卡住不动，等不及时就<kbd>Ctrl+C<kbd> ，然后删了重来。成功后在执行命令的目录下生成一个blog目录，里面就是hexo的内容。</kbd></kbd></p>
+</li>
+<li><p>创建空间1：登录到GitHub，创建一个新的仓库，这里有<strong>第一个</strong>坑，要是想把域名绑定到GitHub 的page上，要创建的仓库名要与GitHub的用户名一样，在博客仓库里的settings里设置GitHub Pages，填写域名，选择mast分支，启动服务即可。</p>
+</li>
+<li><p>创建空间2：其实博客的空间也可以使用gitee（码云），但是码云要绑定自有域名的话，收钱！！！本来就是一个薅羊毛的博客，能省就省吧，当然如果不绑定自有域名的话，gitee在我大天朝速度是很有优势的。另外在gitee中仓库中没有内容是不能启动pages服务的，可以先hexo部署之后再启动服务。</p>
+</li>
+<li><p>关联域名：</p>
+<ul>
+<li>修改A地址：本地ping自己的GitHub地址，<code>ping 用户名.github.io</code> 得到一个IP，例如：192.30.252.153。把IP写入域名解析的A记录中。</li>
+<li>修改CNAME：把www指向到<code>用户名.github.io</code> 。</li>
+</ul>
+</li>
+<li><p>修改配置：把_config.yml，里增加deply节，填写的就是要连接到GitHub的信息。repo要使用ssh的地址，这样可以通过上传的公钥直接访问了。</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">deploy:</span> </span><br><span class="line">	<span class="attr">type:</span> <span class="string">git</span></span><br><span class="line">	<span class="attr">repo:</span> <span class="string">这里填入你之前在GitHub上创建仓库的完整路径，记得加上</span> <span class="string">.git</span></span><br><span class="line">	<span class="attr">branch:</span> <span class="string">master</span></span><br></pre></td></tr></table></figure>
+<p>这里遇到了<strong>第二个</strong>坑，万恶的yml要求冒号后面必须跟一个空格，否则yml是不能生效的，更万恶的是yml配置错了，后面执行的<code>hexo -d</code>命令并不会报错，而是任何反应都没有。</p>
+</li>
+</ul>
+<ul>
+<li><p>创建CNAME：在blog/source目录下创建CNAME文件，无后缀。写入域名，如果带www，那访问时必须带www，如果不写入www，那访问时地址中的www可有可无，反正我是没写：<a href="https://www.gearglen.com/" title="齿轮峡谷" target="_blank" rel="noopener">gearglen.com</a></p>
+</li>
+<li><p>安装插件：命令行下进入到blog目录，执行<code>npm install hexo-deployer-git --save</code></p>
+</li>
+<li><p>发布博客：次序执行<code>hexo clean</code> <code>hexo g</code> <code>hexo d</code> 分别是清理、生成、发布。这里注意<strong>第三个</strong>坑，如果没有使用ssh连接过GitHub，首次要使用命令<code>ssh -T git@github.com</code> 把GitHub的地址加到ssh的host中，并且一定要输入yes。否则报错：Host key verification failed。使用Gitee同理。</p>
+</li>
+</ul>
+<p>​        理论上来说，到这里就应该发布成功了，至少可以看到Hexo的Hello World了，但是我掉入了<strong>第四个</strong>坑，自己控的坑。原因是看了一些教程说部署之后看不到主题，是因为配置文件_config.yml中的：</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># URL</span></span><br><span class="line"><span class="comment">## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'</span></span><br><span class="line"><span class="attr">url:</span> <span class="attr">http://yoursite.com</span></span><br><span class="line"><span class="attr">root:</span> <span class="string">/</span></span><br></pre></td></tr></table></figure>
+<p>没有配置，所以我在提交之前就把这些一起配置了，是按网上找的教程，把自己的github地址和子目录都配置上了，但是我没有仔细看，这里要求的是如果站点不在根目录下，要在这里指定对应的子目录，面我的是直接放到了<a href="petra1218.github.io">petra1218.github.io</a> 仓库的根目录下，根本不需要配置这个，反复了将近一个小时后，还有，才仔细看了注释，清除了配置的内容。再次发布，终于可以看一以默认主题了。</p>
+<ul>
+<li>发布博文：执行命令<code>hexo n 博文名称</code>，在blog/source/_post目录中，多出一个<strong>博文名称.md</strong>文件，用MarkDown编辑器打开就可以编、吹、扯了。博文Ok后，再次发布博客到服务器<code>hexo clean</code> hexo g<code></code>hexo d`。</li>
+<li>修改主题：不改主题的Hexo是不完整的，虽然大家都在用NexT，但是为了弄点新鲜的，我在Google中随便搜了一个极简的主题，还是真不错，用起来也比较简单，<a href="http://forsigner.com/2016/03/10/fexo-doc-zh-cn/" title="forsigner" target="_blank" rel="noopener">Fexo</a>，然后就是修改头像，替换主题中的各种名，还顺手把微信和支付宝的打赏二维码放上去了，为了做个webp的头像，还现安装了一个ps的webp插件，结果Edge竟然不能打开webp的头像，令人费解，还是又换回了jpg的。</li>
+<li>博文编辑器：曾几何时，咱也是用过MD的人，但是我的大脑不想告诉我原来我用的编辑器叫什么名了，又在万能的Google中找了一个极简风格的编辑器<a href="https://typora.io/" title="Typora" target="_blank" rel="noopener">Typora</a>，怎么又是极简。不错，很简单的风格可以让我专注到扯蛋中，简单设置后用着还真的是很顺手。</li>
+</ul>
+<p>​        至此最基本的博客架子已经搭了上了，也到了后半夜了，没有能量再去写博文了，这篇开篇的博文实际上是第二（san）天（tian）夜（ling）里（chen）完成的，顺便还复（xin）习（xue）了一遍MD语法。<br>​        当然后面还有很长的路要走，博客内容、博客主题、讨论区等等，就让博客跟我的懒癌继续搏斗吧。</p>
+<p>严重感谢：<br>​    - <a href="https://zhuanlan.zhihu.com/p/26625249" title="GitHub部署教程" target="_blank" rel="noopener">抄袭来源</a><br>​    - <a href="https://www.jianshu.com/p/84ae2ba1c133 ”Gitee部署教程“" target="_blank" rel="noopener">自助挖坑</a><br>​    - <a href="https://www.jianshu.com/p/88cb883e1d7b ”解决ssh问题“" target="_blank" rel="noopener">填坑帮助</a><br>​    - <a href="https://laravel-china.org/topics/621/you-will-be-able-to-master-these-markdown-grammars" title="MD简单语法" target="_blank" rel="noopener">MD复习</a><br>​<br>假装友链：<br>​    <a href="http://www.baiguangnan.com ”友军白“" target="_blank" rel="noopener">友军白</a> 、<a href="https://www.wandoer.com ”友军端“" target="_blank" rel="noopener">友军端</a></p>
+
     
   </div>
 
